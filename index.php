@@ -314,7 +314,7 @@ $folders = array_filter(glob('*'), 'is_dir');
                     <?php foreach ($folders as $folder): ?>
                         <?php if (file_exists("$folder/index.html")): ?>
                             <div class="portfolio-card">
-                                <h2><?= ucfirst(htmlspecialchars($folder)) ?></h2>
+                                <h2><?= strtoupper(htmlspecialchars($folder)) ?></h2>
                                 <iframe src="<?= $folder ?>/index.html" title="<?= htmlspecialchars($folder) ?> Portfolio"></iframe>
                                 <div class="card-footer">
                                     <a class="open-button" href="<?= $folder ?>/index.html" target="_blank">
